@@ -12,7 +12,7 @@ function deletePagante() {
         success: function (data) {
 
             console.log(data);
-            paganteHtml.fadeOut("slow", function () {
+            paganteHtml.slideUp("slow", function () {
                 paganteHtml.remove();
             });
         },error: function (err) {
