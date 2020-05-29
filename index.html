@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <!-- FONT: LATO -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <!-- FONT: FONTAWESOME -->
@@ -20,8 +20,10 @@
     <script id="pagante-template" type="text/x-handlebars-template">
         <div class="pagante" data-id = {{id}}>
             <h3>Pagante:</h3>
-            <span>{{name}}</span>
-            <span>{{lastname}}</span>
+            <div class="name">
+                <span>{{name}}</span>
+                <span>{{lastname}}</span>
+            </div>
             <span>{{address}}</span>
             <span class="delete"><i class="fas fa-trash-alt"></i></span>
         </div>
@@ -29,9 +31,9 @@
     <title>Db crud</title>
 </head>
 <body>
-    <h1>DataBase Paganti</h1>
-    <div id="target">
-
+    <div id="container">
+        <h1>DataBase Paganti</h1>
+        <div id="target"></div>
     </div>
     <script src="main.js"></script>
 </body>

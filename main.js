@@ -4,13 +4,17 @@ function deletePagante() {
     var id = paganteHtml.data('id');
     console.log(id);
     $.ajax({
-        url: "deletepaganti.php",
-        method: "POST",
+        url: "deletePaganti.php",
+        method: "GET",
         data:{
             id: id
         },
-        success: function () {
-            paganteHtml.remove();
+        success: function (data) {
+
+            console.log(data);
+            paganteHtml.fadeOut("slow", function () {
+                paganteHtml.remove();
+            });
         },error: function (err) {
             console.error(err);
         }
